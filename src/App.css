@@ -1,3 +1,6 @@
+body{
+  font-family: "Victor Mono";
+}
 .particles{
 z-index: -1;
 
