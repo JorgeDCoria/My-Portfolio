@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "../../components/header/Header";
 import NavBar from "../../components/navBar/NavBar";
 
 const Home = () => {
   return (
     <div>
       <NavBar />
+      <Header />
       <h1 className="font-title text-6xl font-bold  text-secondary_600 ">
         Hello world! este es un texto de prueba para visualizar la fuente victor
         mono

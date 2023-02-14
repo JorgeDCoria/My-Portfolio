@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        header: "url('./assets/header-a.jpg')",
+      },
       fontFamily: {
         title: ["Play", "sans-serif"],
         subtitle: ["Ubuntu", "sans-serif"],
