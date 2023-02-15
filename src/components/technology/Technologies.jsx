@@ -38,13 +38,17 @@ const Technologies = () => {
             Tecnologias
           </h1>
           <div className=" flex h-4/5 w-full items-center justify-around ">
-            <div className="flex h-full w-1/2 flex-wrap items-center justify-center gap-8 ">
+            <div className="flex h-full w-full flex-wrap items-center justify-center gap-8 lg:w-1/2 ">
               {technologies.map((tech) => (
                 <Icon image={tech.img} title={tech.title} />
               ))}
             </div>
 
-            <img className="h-full rounded-xl" src={image} alt="programming" />
+            <img
+              className="hidden h-full rounded-xl lg:block"
+              src={image}
+              alt="programming"
+            />
           </div>
         </div>
       </div>
