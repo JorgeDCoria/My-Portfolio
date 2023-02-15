@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="relative z-0 h-screen w-full bg-header bg-cover bg-center bg-no-repeat">
       <div className="z-10 h-full w-full bg-primary_800 opacity-30"></div>
-      <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-8 lg:flex-row">
+      <div className="absolute top-0 flex h-full w-full flex-col items-center justify-around lg:flex-row">
         <div className="order-2 flex h-[400px] flex-col justify-around rounded-lg bg-primary_900  p-4  text-white md:w-[70ch] lg:order-1">
           <h1 className="  font-title text-2xl font-bold uppercase md:text-center lg:text-5xl">
             Coria Jorge D. <br /> Full stack developer{" "}

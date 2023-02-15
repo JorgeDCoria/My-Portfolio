@@ -16,13 +16,18 @@ export default function ParticlesComponent() {
 
   return (
     <Particles
+      className="h-full"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
+        fullScreen: {
+          enable: false,
+          zIndex: 0,
+        },
         background: {
           color: {
-            value: "#0d47a1",
+            value: "#0d2c3f",
           },
         },
         fpsLimit: 120,
@@ -86,7 +91,35 @@ export default function ParticlesComponent() {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: 10,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 10,
+              size_min: 10,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 100,
+            color: "#ffffff",
+            opacity: 1,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
           },
         },
         detectRetina: true,
