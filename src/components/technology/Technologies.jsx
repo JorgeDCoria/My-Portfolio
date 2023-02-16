@@ -29,23 +29,23 @@ const Technologies = () => {
     { img: scrum, title: "Scrum" },
   ];
   return (
-    <div className="relative h-[90vh] w-full">
+    <div className="relative h-[90vh] w-full ">
       <ParticlesComponent />
 
       <div className="absolute top-0 z-10  h-full w-full  ">
         <div className="flex h-full w-full flex-col items-center">
-          <h1 className="h-1/5 p-2 font-title text-5xl text-white">
+          <h1 className="h-1/6 p-2 font-title text-5xl text-white">
             Tecnologias
           </h1>
-          <div className=" flex h-4/5 w-full items-center justify-around ">
+          <div className=" flex h-5/6 w-full items-center justify-around ">
             <div className="flex h-full w-full flex-wrap items-center justify-center gap-8 lg:w-1/2 ">
               {technologies.map((tech) => (
-                <Icon image={tech.img} title={tech.title} />
+                <Icon key={tech.title} image={tech.img} title={tech.title} />
               ))}
             </div>
 
             <img
-              className="hidden h-full rounded-xl lg:block"
+              className="hidden h-5/6 rounded-xl lg:block"
               src={image}
               alt="programming"
             />
