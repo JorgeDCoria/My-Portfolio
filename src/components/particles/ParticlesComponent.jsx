@@ -65,18 +65,18 @@ export default function ParticlesComponent() {
             width: 1.5,
           },
           collisions: {
-            enable: false,
-          },
-          move: {
-            directions: "none",
             enable: true,
-            outModes: {
-              default: "bounce",
-            },
-            random: false,
-            speed: 2,
-            straight: true,
           },
+          // move: {
+          //   directions: "none",
+          //   enable: true,
+          //   outModes: {
+          //     default: "bounce",
+          //   },
+          //   random: false,
+          //   speed: 1,
+          //   straight: true,
+          // },
           number: {
             density: {
               enable: true,
@@ -115,11 +115,11 @@ export default function ParticlesComponent() {
             straight: false,
             out_mode: "out",
             bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200,
-            },
+            // attract: {
+            //   enable: true,
+            //   rotateX: 100,
+            //   rotateY: 100,
+            // },
           },
         },
         detectRetina: true,
