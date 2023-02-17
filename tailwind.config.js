@@ -3,6 +3,20 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      keyframes: {
+        shadow: {
+          "0% , 100%": {
+            "box-shadow": "1px 4px 13px 7px rgba(63,33,13,0.25)",
+          },
+          "50%": { "box-shadow": "1px 4px 13px 7px  rgba(215,123,66,0.84)" },
+        },
+      },
+      animation: {
+        shadow: "shadow 3s infinite",
+      },
+      boxShadow: {
+        project: "10px 13px 13px -3px rgba(147,76,31,0.58)",
+      },
       backgroundImage: {
         header: "url('./assets/header-a.jpg')",
       },

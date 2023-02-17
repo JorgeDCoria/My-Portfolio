@@ -2,7 +2,7 @@ import React from "react";
 import About from "../../components/about/About";
 import Header from "../../components/header/Header";
 import NavBar from "../../components/navBar/NavBar";
-import Proyects from "../../components/Proyects/Proyects";
+import Projects from "../../components/Proyects/Projects";
 import Technologies from "../../components/technology/Technologies";
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       <div id="proyectos">
-        <Proyects />
+        <Projects />
       </div>
     </div>
   );
