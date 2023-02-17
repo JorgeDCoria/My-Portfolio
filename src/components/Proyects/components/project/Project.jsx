@@ -7,15 +7,21 @@ const Project = ({ title, img, description }) => {
     setShowModal(!showModal);
   };
   return (
-    <div className="group relative flex  h-80 w-72 animate-shadow flex-col items-center overflow-hidden rounded-lg border-none">
-      <div className="text-center font-title text-2xl">{title}</div>
-      <div className=" flex justify-center">
-        <img className="h-56 w-[90%] object-cover" src={img} alt={title} />
+    <div className="group relative flex h-80  w-72 animate-shadowSecondary flex-col items-center overflow-hidden rounded-lg border-none hover:animate-shadowPrimary">
+      <div className="p-2 text-center font-title text-3xl font-semibold text-neutral-500">
+        {title}
       </div>
-      <div className="absolute -left-full  h-full w-full border border-blue-500 duration-500 group-hover:left-0 group-hover:bottom-0">
+      <div className=" flex justify-center">
+        <img
+          className="h-56 w-[90%] rounded-lg object-cover"
+          src={img}
+          alt={title}
+        />
+      </div>
+      <div className="absolute -left-full -bottom-full h-full  w-full duration-500 group-hover:left-0 group-hover:bottom-0">
         <div className="relative h-full w-full">
           <svg
-            className="absolute top-0 left-0 z-40 h-full w-full opacity-70"
+            className="absolute top-0 left-0 z-40 h-full w-full opacity-90"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 2000 1500"
           >
@@ -85,13 +91,20 @@ const Project = ({ title, img, description }) => {
               </g>
             </g>
           </svg>
-          <div className="absolute top-0 left-0 z-50 h-full w-full">
-            <p>{description}</p>
-            <button onClick={handleShowModal}>Mas Info</button>
+          <div className="absolute top-0 left-0 z-50 flex h-full w-full flex-col items-center justify-around">
+            <p className="p-2 text-center font-semibold text-primary_900">
+              {description}
+            </p>
+            <button
+              onClick={handleShowModal}
+              className="w-[90%] rounded-lg bg-secondary_500 p-2 text-white hover:bg-secondary_400"
+            >
+              Mas Info
+            </button>
           </div>
         </div>
       </div>
-      {showModal && <ModalProject />}
+      {showModal && <ModalProject handleClickClose={handleShowModal} />}
     </div>
   );
 };
