@@ -20,12 +20,14 @@ module.exports = {
       animation: {
         shadowPrimary: "shadowPrimary 3s infinite",
         shadowSecondary: "shadowSecondary 3s infinite",
+        spinOne: "spin 35s linear infinite",
       },
       boxShadow: {
         project: "10px 13px 13px -3px rgba(147,76,31,0.58)",
       },
       backgroundImage: {
         header: "url('./assets/header-a.jpg')",
+        project: ``,
       },
       fontFamily: {
         title: ["Play", "sans-serif"],

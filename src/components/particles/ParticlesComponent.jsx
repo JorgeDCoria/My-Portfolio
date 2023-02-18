@@ -30,7 +30,7 @@ export default function ParticlesComponent() {
             value: "#0d2c3f",
           },
         },
-        fpsLimit: 120,
+        fpsLimit: 50,
         interactivity: {
           events: {
             onClick: {
@@ -41,7 +41,7 @@ export default function ParticlesComponent() {
               enable: true,
               mode: "repulse",
             },
-            resize: true,
+            resize: false,
           },
           modes: {
             push: {
