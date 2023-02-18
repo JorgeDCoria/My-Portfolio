@@ -1,12 +1,18 @@
 import React from "react";
 import Button from "../../../button/Button";
+import Carousel from "../carousel/Carousel";
+import landing from "../../../../assets/projects/food/landing1.PNG";
+import addrecipe from "../../../../assets/projects/food/addrecipe.PNG";
+import form from "../../../../assets/projects/food/form.PNG";
+import home from "../../../../assets/projects/food/home.png";
 const handleClick = () => {};
 
 const ModalProject = ({ handleClickClose }) => {
+  const images = [landing, home, form, addrecipe];
   return (
-    <div className="w-scree fixed inset-0 z-[60] flex h-screen items-center justify-center bg-neutral-400">
-      <div className="relative h-3/4 w-3/4 bg-primary_200">
-        <div className="absolute top-2 right-2">
+    <div className="w-scree fixed inset-0 z-[60] flex h-screen items-center justify-center bg-[rgba(4,15,21,0.7)]">
+      <div className="relative h-4/5 w-4/5">
+        <div className="absolute top-2 right-2 z-[70]">
           <button onClick={handleClickClose}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +24,17 @@ const ModalProject = ({ handleClickClose }) => {
             </svg>
           </button>
         </div>
-        <div className="flex w-full justify-around p-6 text-white">
+        <Carousel images={images} />
+        <div className="absolute bottom-2 flex w-full justify-center p-6 text-white">
           {/* <Button danger text={"Cancelar"} lg onClick={handleClickClose} /> */}
 
-          <Button lg onClick={handleClick} text={"Ir al Sitio"} />
+          <a
+            href="https://foodfront-production.up.railway.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button lg text={"Ir al Sitio"} />
+          </a>
         </div>
       </div>
     </div>
