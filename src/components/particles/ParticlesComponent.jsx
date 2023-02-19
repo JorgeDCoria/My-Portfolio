@@ -30,7 +30,7 @@ export default function ParticlesComponent() {
             value: "#0d2c3f",
           },
         },
-        fpsLimit: 50,
+        fpsLimit: 120,
         interactivity: {
           events: {
             onClick: {
@@ -67,22 +67,12 @@ export default function ParticlesComponent() {
           collisions: {
             enable: true,
           },
-          // move: {
-          //   directions: "none",
-          //   enable: true,
-          //   outModes: {
-          //     default: "bounce",
-          //   },
-          //   random: false,
-          //   speed: 1,
-          //   straight: true,
-          // },
           number: {
             density: {
               enable: true,
               area: 700,
             },
-            value: 100,
+            value: 70,
           },
           opacity: {
             value: 0.5,
@@ -91,21 +81,15 @@ export default function ParticlesComponent() {
             type: "circle",
           },
           size: {
-            value: 10,
-            random: true,
+            // value: { min: 1, max: 5 },
+            value: 12,
+            random: false,
             anim: {
               enable: true,
               speed: 10,
-              size_min: 10,
+              size_min: 5,
               sync: false,
             },
-          },
-          line_linked: {
-            enable: true,
-            distance: 100,
-            color: "#ffffff",
-            opacity: 1,
-            width: 1,
           },
           move: {
             enable: true,
@@ -113,12 +97,24 @@ export default function ParticlesComponent() {
             direction: "none",
             random: false,
             straight: false,
-            out_mode: "out",
+            out_mode: {
+              default: "bounce",
+            },
             bounce: false,
             // attract: {
             //   enable: true,
             //   rotateX: 100,
             //   rotateY: 100,
+            // },
+            // move: {
+            //   directions: "none",
+            //   enable: true,
+            //   outModes: {
+            //     default: "bounce",
+            //   },
+            //   random: false,
+            //   speed: 1,
+            //   straight: true,
             // },
           },
         },
