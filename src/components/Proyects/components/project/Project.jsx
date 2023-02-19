@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalProject from "../modalProject/ModalProject";
 
-const Project = ({ title, img, description }) => {
+const Project = ({ project }) => {
   const [showModal, setShowModal] = useState(false);
   const handleShowModal = () => {
     setShowModal(!showModal);
@@ -9,13 +9,13 @@ const Project = ({ title, img, description }) => {
   return (
     <div className="group relative flex h-80  w-72 animate-shadowSecondary flex-col items-center overflow-hidden  rounded-lg border-none hover:animate-shadowPrimary">
       <div className="p-2 text-center font-title text-3xl font-semibold text-neutral-500">
-        {title}
+        {project.title}
       </div>
       <div className=" flex justify-center">
         <img
           className="h-56 w-[90%] rounded-lg object-cover"
-          src={img}
-          alt={title}
+          src={project.image}
+          alt={project.title}
         />
       </div>
       <div className="absolute -left-full -bottom-full h-full w-full duration-1000 group-hover:left-0 group-hover:bottom-0">
@@ -94,7 +94,7 @@ const Project = ({ title, img, description }) => {
 
           <div className="absolute top-0 left-0 z-50 flex h-full w-full flex-col items-center justify-around">
             <p className="p-2 text-center font-semibold text-primary_900">
-              {description}
+              {project.description}
             </p>
             <button
               onClick={handleShowModal}
@@ -105,7 +105,13 @@ const Project = ({ title, img, description }) => {
           </div>
         </div>
       </div>
-      {showModal && <ModalProject handleClickClose={handleShowModal} />}
+      {showModal && (
+        <ModalProject
+          handleClickClose={handleShowModal}
+          data={project.data}
+          url={project.url}
+        />
+      )}
     </div>
   );
 };

@@ -1,30 +1,27 @@
 import React, { useState } from "react";
 
-const Carousel = ({ images }) => {
+const Carousel = ({ data }) => {
   const [numberImage, setNumberImage] = useState(0);
   const nextImage = () => {
-    if (numberImage === images.length - 1) setNumberImage(0);
+    if (numberImage === data.length - 1) setNumberImage(0);
     else setNumberImage(numberImage + 1);
   };
   const prevImage = () => {
-    if (numberImage === 0) setNumberImage(images.length - 1);
+    if (numberImage === 0) setNumberImage(data.length - 1);
     else setNumberImage(numberImage - 1);
   };
 
   return (
     <div className="relative flex h-full w-full items-center justify-center">
       {/* {images.map((image, i) => ( */}
-      <div className="absolute top-2 left-8 h-52 w-80 rounded-lg bg-[rgba(13,44,63,0.8)]">
+      <div className="absolute top-2 left-8 flex h-52 w-80 items-center justify-center rounded-lg bg-[rgba(13,44,63,0.8)]">
         <p className="p-2 text-center text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quis
-          sequi maxime perspiciatis quia consectetur, fugiat dolore libero,
-          voluptatibus non neque minus? Iure molestiae officiis eos, ipsum
-          eveniet repellat laudantium?
+          {data[numberImage].description}
         </p>
       </div>
       <img
         key={numberImage}
-        src={images[numberImage]}
+        src={data[numberImage].image}
         className="h-full w-full object-contain transition-all"
         alt=""
       />

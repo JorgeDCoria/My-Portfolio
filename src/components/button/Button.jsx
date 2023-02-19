@@ -6,7 +6,7 @@ export default function Button({ onClick, text, danger, md, lg }) {
       throw new Error("not found size md or lg <ButtonMd md .../>");
     if (md && lg)
       throw new Error("you can't select both properties md && lg, choose one ");
-  }, []);
+  }, [md, lg]);
   return (
     <>
       <button
