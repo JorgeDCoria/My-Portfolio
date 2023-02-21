@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../../components/about/About";
+import Contact from "../../components/contact/Contact";
 import Header from "../../components/header/Header";
 import NavBar from "../../components/navBar/NavBar";
 import Projects from "../../components/Proyects/Projects";
@@ -24,6 +25,9 @@ const Home = () => {
 
       <div id="proyectos">
         <Projects />
+      </div>
+      <div id="contacto">
+        <Contact />
       </div>
     </div>
   );

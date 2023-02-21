@@ -36,7 +36,7 @@ function NavBar() {
     {
       title: "Contacto",
       icon: <RiContactsBookLine className="text-3xl" />,
-      section: "",
+      section: "#contacto",
     },
   ];
 
