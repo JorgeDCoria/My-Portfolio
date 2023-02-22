@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import InputText from "./InputText";
 import { toast } from "react-toastify";
+// assuming top-level await for brevity
+import emailjs from "@emailjs/browser";
+import ModalMail from "./ModalMail";
 
 const validar = (input) => {
   const ExpRegLetrasEspacio = "^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$";
-  const ExpRegEmail = `/^(([^<>()[].,;:s@"]+(.[^<>()[].,;:s@"]+)*)|(".+"))@(([^<>()[].,;:s@"]+.)+[^<>()[].,;:s@"]{2,})$/`;
+  const ExpRegEmail =
+    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
   const error = {};
   if (input.name === "") {
     error.name = "empty field";
@@ -12,9 +16,9 @@ const validar = (input) => {
     error.name = "The name must not contain symbols or be empty";
   }
 
-  if (input.mail === "") {
+  if (input.email === "") {
     error.mail = "empty field";
-  } else if (input.mail.match(ExpRegEmail) === null) {
+  } else if (input.email.match(ExpRegEmail) === null) {
     error.mail = "Émail Invalid";
   }
 
@@ -28,32 +32,58 @@ const validar = (input) => {
 const Form = () => {
   const [input, setInput] = useState({
     name: "",
-    mail: "",
+    email: "",
     message: "",
   });
   const [error, setError] = useState({});
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
     setError(validar({ ...input, [name]: value }));
   };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (Object.getOwnPropertyNames(error).length === 0) {
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_YOUR_SERVICE_ID,
+          process.env.REACT_APP_YOUR_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_YOUR_PUBLIC_KEY
+        )
+        .then((result) => {
+          setInput({ name: "", email: "", message: "" });
+          toast.success("Mensaje enviado", { theme: "colored" });
+        })
+
+        .catch((e) => alert(e.message));
+    } else {
+      toast.error("Complete los campos para enviar el mensaje", {
+        theme: "colored",
+      });
+    }
+  };
   return (
-    <div className="flex w-full items-center justify-center   lg:w-1/2">
+    <div className="relative flex w-full items-center justify-center  lg:w-1/2">
       <form
+        onSubmit={sendEmail}
+        ref={form}
         className="flex w-full flex-col gap-8 rounded-xl bg-primary_700  p-8 shadow-project shadow-primary_900 md:w-5/6"
         action="
     "
       >
         <InputText
           label="name"
-          valueInput={input.name}
+          value={input.name}
           handleChange={handleChange}
           error={error.name}
         />
         <InputText
-          label="mail"
-          value={input.mail}
+          label="email"
+          value={input.email}
           handleChange={handleChange}
           error={error.mail}
         />
@@ -65,6 +95,7 @@ const Form = () => {
             name="message"
             id=""
             rows="10"
+            value={input.message}
             onChange={(e) => handleChange(e)}
           ></textarea>
           {error.message && (
@@ -81,6 +112,7 @@ const Form = () => {
           className="w-full cursor-pointer rounded-lg bg-primary_500 p-2 text-white transition-all duration-500 hover:scale-110 hover:bg-primary_400"
         />
       </form>
+      <ModalMail />
     </div>
   );
 };
