@@ -36,8 +36,12 @@ const Form = () => {
     message: "",
   });
   const [error, setError] = useState({});
+  const [showModal, setShowModal] = useState(false);
   const form = useRef();
-
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+    error.email && setError({ ...error, ["email"]: false });
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
@@ -46,7 +50,10 @@ const Form = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (Object.getOwnPropertyNames(error).length === 0) {
+    if (
+      ![input.name, input.message, input.email].includes("") &&
+      Object.getOwnPropertyNames(error).length === 0
+    ) {
       emailjs
         .sendForm(
           process.env.REACT_APP_YOUR_SERVICE_ID,
@@ -57,9 +64,14 @@ const Form = () => {
         .then((result) => {
           setInput({ name: "", email: "", message: "" });
           toast.success("Mensaje enviado", { theme: "colored" });
+          handleShowModal();
         })
 
-        .catch((e) => alert(e.message));
+        .catch((e) => {
+          console.log(e.message);
+          handleShowModal();
+          error.mailjs = true;
+        });
     } else {
       toast.error("Complete los campos para enviar el mensaje", {
         theme: "colored",
@@ -112,7 +124,16 @@ const Form = () => {
           className="w-full cursor-pointer rounded-lg bg-primary_500 p-2 text-white transition-all duration-500 hover:scale-110 hover:bg-primary_400"
         />
       </form>
-      <ModalMail />
+      {showModal && (
+        <ModalMail
+          message={`${
+            error.email
+              ? "Ah ocurrido un error inesperado, Intente mas tarde por favor"
+              : "Su mensaje ha sido enviado con exito. En las proximas horas me estare comunicando con ud, saludos !!"
+          }`}
+          handleClick={handleShowModal}
+        />
+      )}
     </div>
   );
 };
