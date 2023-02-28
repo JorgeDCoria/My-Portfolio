@@ -42,6 +42,7 @@ const Form = () => {
   const form = useRef();
   const handleShowModal = () => {
     setShowModal(!showModal);
+    errorEmail && setErrorEmail(false);
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,11 +61,10 @@ const Form = () => {
           process.env.REACT_APP_YOUR_SERVICE_ID,
           process.env.REACT_APP_YOUR_TEMPLATE_ID,
           form.current,
-          "hola que tal"
+          process.env.REACT_APP_YOUR_PUBLIC_KEY
         )
         .then((result) => {
           setInput({ name: "", email: "", message: "" });
-          toast.success("Mensaje enviado", { theme: "colored" });
           handleShowModal();
         })
 
