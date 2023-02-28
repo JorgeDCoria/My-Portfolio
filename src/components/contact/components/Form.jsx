@@ -36,11 +36,12 @@ const Form = () => {
     message: "",
   });
   const [error, setError] = useState({});
+  //controla si surge un error al enviar el msj
+  const [errorEmail, setErrorEmail] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const form = useRef();
   const handleShowModal = () => {
     setShowModal(!showModal);
-    error.email && setError({ ...error, ["email"]: false });
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -59,7 +60,7 @@ const Form = () => {
           process.env.REACT_APP_YOUR_SERVICE_ID,
           process.env.REACT_APP_YOUR_TEMPLATE_ID,
           form.current,
-          process.env.REACT_APP_YOUR_PUBLIC_KEY
+          "hola que tal"
         )
         .then((result) => {
           setInput({ name: "", email: "", message: "" });
@@ -69,8 +70,8 @@ const Form = () => {
 
         .catch((e) => {
           console.log(e.message);
+          setErrorEmail(true);
           handleShowModal();
-          error.mailjs = true;
         });
     } else {
       toast.error("Complete los campos para enviar el mensaje", {
@@ -79,11 +80,11 @@ const Form = () => {
     }
   };
   return (
-    <div className="relative flex w-full items-center justify-center  lg:w-1/2">
+    <div className="relative flex w-full items-center justify-center ">
       <form
         onSubmit={sendEmail}
         ref={form}
-        className="flex w-full flex-col gap-8 rounded-xl bg-primary_700  p-8 shadow-project shadow-primary_900 md:w-5/6"
+        className="flex w-full flex-col gap-8 rounded-xl bg-primary_700 p-8 shadow-project shadow-primary_900 md:w-5/6"
         action="
     "
       >
@@ -126,8 +127,9 @@ const Form = () => {
       </form>
       {showModal && (
         <ModalMail
+          error={errorEmail}
           message={`${
-            error.email
+            errorEmail
               ? "Ah ocurrido un error inesperado, Intente mas tarde por favor"
               : "Su mensaje ha sido enviado con exito. En las proximas horas me estare comunicando con ud, saludos !!"
           }`}
