@@ -20,12 +20,12 @@ const social = [
 ];
 const Contact = () => {
   return (
-    <div className="grid w-full grid-cols-2">
-      <h1 className="col-span-2 mb-4 place-self-center font-title text-5xl font-bold text-primary_500">
+    <div className="grid w-full grid-cols-1 lg:grid-cols-2">
+      <h1 className="mb-4 place-self-center font-title text-5xl font-bold text-primary_500 lg:col-span-2">
         Contactame
       </h1>
       <div className="flex h-full w-full justify-center ">
-        <div className="grid h-full w-5/6 grid-cols-3 place-content-center gap-4 rounded-xl bg-contactme bg-cover bg-center bg-no-repeat p-4">
+        <div className="grid h-full w-full grid-cols-3 place-content-center gap-4 rounded-xl bg-contactme bg-cover bg-center bg-no-repeat p-4 md:w-5/6">
           {social.map((e) => (
             <ContactSocial
               key={e.alt}

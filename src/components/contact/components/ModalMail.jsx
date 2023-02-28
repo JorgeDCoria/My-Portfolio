@@ -3,8 +3,16 @@ import { RiErrorWarningLine } from "react-icons/ri";
 import Button from "../../button/Button";
 const ModalMail = ({ error, message, handleClick }) => {
   return (
-    <div className="fixed inset-0 z-[60] flex h-screen w-screen items-center justify-center bg-[rgba(4,15,21,0.7)]">
-      <div className="flex h-1/2 w-4/5 flex-col justify-between overflow-hidden rounded-xl bg-primary_50 md:w-1/2 lg:h-3/5 lg:w-1/3">
+    <div
+      className="fixed inset-0 z-[60] flex h-screen w-screen items-center justify-center bg-[rgba(4,15,21,0.7)]"
+      onClick={handleClick}
+    >
+      <div
+        className="flex h-1/2 w-4/5 flex-col justify-between overflow-hidden rounded-xl bg-primary_50 md:w-1/2 lg:h-3/5 lg:w-1/3"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <h1
           className={`${
             error ? "bg-red-500" : "bg-primary_500"
