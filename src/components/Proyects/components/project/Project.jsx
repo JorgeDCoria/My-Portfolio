@@ -7,21 +7,22 @@ const Project = ({ project }) => {
     setShowModal(!showModal);
   };
   return (
-    <div className="group relative flex h-80  w-72 animate-shadowSecondary flex-col items-center overflow-hidden  rounded-lg border-none hover:animate-shadowPrimary">
-      <div className="p-2 text-center font-title text-3xl font-semibold text-neutral-500">
+    <div className="group relative h-[70vh] animate-shadowSecondary flex-col items-center overflow-hidden  rounded-lg border-none hover:animate-shadowPrimary">
+      <div className="h-1/6 p-4 text-center font-title text-3xl font-semibold text-neutral-500">
         {project.title}
       </div>
-      <div className=" flex justify-center">
+      <div className="flex h-5/6 items-center justify-center">
         <img
-          className="h-56 w-[90%] rounded-lg object-cover"
+          className="h-[70%] w-[95%] rounded-lg object-cover"
           src={project.image}
           alt={project.title}
         />
       </div>
+      {/*  al hacer hover se muestra lo siguiente */}
       <div className="absolute -left-full -bottom-full h-full w-full duration-1000 group-hover:left-0 group-hover:bottom-0">
         <div className="relative h-full w-full border border-red-600 ">
           <svg
-            className="absolute -top-20 -left-24 z-40 h-[500px] w-[500px] animate-spinOne rounded-full border border-green-500 duration-1000"
+            className="absolute -top-28 -left-24 z-40 hidden h-[160%] w-[160%] animate-spinOne rounded-full border border-green-500 duration-1000 lg:block"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 2000 1500"
             width="1em"
@@ -92,8 +93,8 @@ const Project = ({ project }) => {
             </g>
           </svg>
 
-          <div className="absolute top-0 left-0 z-50 flex h-full w-full flex-col items-center justify-around">
-            <p className="p-2 text-center font-semibold text-primary_900">
+          <div className="absolute top-0 left-0 z-50 flex h-full w-full flex-col items-center justify-around bg-primary_400 lg:bg-transparent">
+            <p className="p-2 text-center font-semibold text-primary_900 md:text-2xl lg:text-base">
               {project.description}
             </p>
             <button

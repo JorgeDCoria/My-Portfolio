@@ -6,8 +6,14 @@ import Carousel from "../carousel/Carousel";
 
 const ModalProject = ({ handleClickClose, data, url }) => {
   return (
-    <div className="w-scree fixed inset-0 z-[60] flex h-screen items-center justify-center bg-[rgba(4,15,21,0.7)]">
-      <div className="relative h-2/5 w-[95%] lg:h-4/5 lg:w-4/5">
+    <div
+      className="w-scree fixed inset-0 z-[60] flex h-screen items-center justify-center bg-[rgba(4,15,21,0.7)]"
+      onClick={handleClickClose}
+    >
+      <div
+        className="relative h-2/5 w-[95%] lg:h-4/5 lg:w-4/5"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="absolute top-2 right-2 z-[70]">
           <button onClick={handleClickClose}>
             <svg
