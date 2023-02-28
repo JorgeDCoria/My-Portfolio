@@ -28,6 +28,7 @@ module.exports = {
       backgroundImage: {
         header: "url('./assets/header-a.jpg')",
         project: ``,
+        contactme: "url('./assets/contactme.jpg')",
       },
       fontFamily: {
         title: ["Play", "sans-serif"],
