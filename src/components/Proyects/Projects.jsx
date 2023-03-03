@@ -4,7 +4,7 @@ import projects from "../../Data/projects";
 
 const Projects = () => {
   return (
-    <div className="h-screen p-4">
+    <div className="min-h-screen p-4">
       <h1 className="text-center font-title text-5xl   text-primary_500">
         Proyectos
       </h1>

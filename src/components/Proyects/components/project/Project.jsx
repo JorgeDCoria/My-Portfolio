@@ -7,7 +7,7 @@ const Project = ({ project }) => {
     setShowModal(!showModal);
   };
   return (
-    <div className="group relative h-[70vh] animate-shadowSecondary flex-col items-center overflow-hidden  rounded-lg border-none hover:animate-shadowPrimary">
+    <div className="group relative h-[70vh] animate-shadowSecondary flex-col items-center overflow-hidden rounded-lg  border-none bg-white hover:animate-shadowPrimary">
       <div className="h-1/6 p-4 text-center font-title text-3xl font-semibold text-neutral-500">
         {project.title}
       </div>
