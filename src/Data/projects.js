@@ -3,6 +3,19 @@ import addrecipe from "../assets/projects/food/addrecipe.PNG";
 import form from "../assets/projects/food/form.PNG";
 import homeFood from "../assets/projects/food/home.png";
 import food from "../assets/projects/food/landing.PNG";
+import {
+  login,
+  registrarse,
+  actualizar,
+  recuperar,
+} from "../assets/projects/Login";
+
+import {
+  gamesHome,
+  gamesHome2,
+  gamesIpad,
+  gamesMobile,
+} from "../assets/projects/games";
 
 import {
   mecanuHome,
@@ -109,18 +122,40 @@ const projects = [
       },
     ],
   },
-  // {
-  //   title: "",
-  //   image: "",
-  //   description: "",
-  //   data: [{ description: "", image: "" }],
-  // },
-  // {
-  //   title: "",
-  //   image: "",
-  //   description: "",
-  //   data: [{ description: "", image: "" }],
-  // },
+  {
+    title: "Vide Games",
+    image: gamesHome,
+    description:
+      "Desarrollo de proyecto con tematica de video Juegos. El fin del proyecto fue familiarizarse con el CSS framework Tailwind (El proyecto es totalmente responsive). Tecnologias: React, Tailwind, react-router-dom, react-icons",
+    data: [
+      {
+        description:
+          "Home Page, se renderizan componentes como un sidebar que contiene items de navegacion, una seccion de busqueda, panel de navegacion e imagen principal",
+        image: gamesHome,
+      },
+      {
+        description:
+          "En la parte inferior se observa un renderizado de componentes de tipo cards, cada una de ellas representa un juego y algunos con descuentos.",
+        image: gamesHome2,
+      },
+      {
+        description:
+          "El sistema es totalmente responsive en tablets y sus variaciones de resolucion",
+        image: gamesIpad,
+      },
+      {
+        description:
+          "Responsive en dispositivos mobiles. La barra de menu se oculta y se activa haciendo click en el boton ubicado en la parte inferior derecha.",
+        image: gamesMobile,
+      },
+    ],
+  },
+  {
+    title: "Login",
+    image: login,
+    description: "",
+    data: [{ description: "", image: "" }],
+  },
 ];
 
 export default projects;
