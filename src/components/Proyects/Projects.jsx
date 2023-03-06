@@ -5,7 +5,7 @@ import projects from "../../Data/projects";
 const Projects = () => {
   return (
     <div className="min-h-screen p-4">
-      <h1 className="text-center font-title text-5xl   text-primary_500">
+      <h1 className="mb-6 text-center font-title text-5xl font-bold  text-primary_500">
         Proyectos
       </h1>
       <div className="grid grid-cols-1 gap-4  lg:grid-cols-3">
