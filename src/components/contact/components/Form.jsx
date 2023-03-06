@@ -84,7 +84,7 @@ const Form = () => {
       <form
         onSubmit={sendEmail}
         ref={form}
-        className="flex w-full flex-col gap-8 rounded-xl bg-primary_700 p-8 shadow-project shadow-primary_900 md:w-5/6"
+        className="flex w-full flex-col gap-8 rounded-xl bg-primary_base p-8 shadow-project shadow-primary_900 md:w-5/6"
         action="
     "
       >
