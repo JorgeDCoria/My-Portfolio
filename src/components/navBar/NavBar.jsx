@@ -47,9 +47,9 @@ function NavBar() {
     <div
       className={`fixed flex h-screen ${
         showMenu ? "left-0" : "-left-full"
-      } z-50 w-72 flex-col items-center bg-primary_800 p-4 font-title font-semibold opacity-80 lg:left-0 lg:h-16 lg:w-full lg:flex-row lg:justify-between`}
+      } z-50 w-72 flex-col items-center bg-white p-4 font-title font-semibold text-primary_400  lg:left-0 lg:top-0 lg:h-16 lg:w-full lg:flex-row lg:justify-between`}
     >
-      <div className="mb-10 text-3xl text-white lg:mb-0">
+      <div className="mb-10 text-3xl lg:mb-0">
         <a href="#header">My Portfolio</a>
       </div>
       <div className="flex flex-col gap-4 lg:flex-row">
