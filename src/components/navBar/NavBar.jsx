@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Item from "./components/Item";
+import cv from "../../assets/CoriaJorgeD-CV.pdf";
 import {
   RiQuestionLine,
   RiListSettingsLine,
@@ -31,7 +32,7 @@ function NavBar() {
     {
       title: "Descargar_Cv",
       icon: <RiFileDownloadLine className="text-3xl" />,
-      section: "",
+      section: cv,
     },
     {
       title: "Contacto",

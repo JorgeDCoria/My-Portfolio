@@ -7,15 +7,16 @@ const Header = () => {
       <div className="z-10 h-full w-full bg-primary_800 opacity-30"></div>
       <div className="absolute top-0 flex h-full w-full flex-col items-center justify-around lg:flex-row">
         <div className="order-2 flex h-[400px] flex-col justify-around rounded-lg bg-primary_900 p-4 text-secondary_base md:w-[70ch] lg:order-1">
-          <h1 className="  font-title text-2xl font-bold uppercase  md:text-center lg:text-5xl">
+          <h1
+            className={`text-center font-title text-2xl font-bold uppercase lg:text-5xl`}
+          >
             Coria Jorge D. <br /> Full stack developer{" "}
           </h1>
           <p className="text-justify text-white">
-            "Una de las cosas más fascinantes de los programadores es que no
-            puedes saber si están trabajando o no sólo con mirarlos. A menudo
-            están sentados aparentemente tomando café, chismorreando o mirando a
-            las nubes. Sin embargo, es posible que estén poniendo en orden todas
-            las ideas individuales y sin relación que pululan por su mente"
+            ¿Buscas un programador que pueda trabajar en cualquier lenguaje de
+            programación y cualquier plataforma? Con mi amplia experiencia en
+            programación y mi capacidad para aprender rápidamente, puedo
+            adaptarme a cualquier proyecto y entregar resultados sobresalientes.
           </p>
         </div>
         <img
