@@ -2,11 +2,11 @@ import React from "react";
 import aboutme from "../../assets/aboutme.jpg";
 const About = () => {
   return (
-    <div className="box-border flex min-h-[80vh] w-full flex-col items-center justify-around overflow-y-auto bg-gradient-to-b from-primary_900 to-primary_700 p-4 lg:flex-row">
+    <div className="box-border flex min-h-[80vh] w-full flex-col items-center justify-around overflow-y-auto bg-gradient-to-t from-primary_900 via-primary_800 to-primary_900 p-4 lg:flex-row">
       <div className="flex h-40 w-full items-center justify-center rounded-lg p-4 md:min-h-[300px] md:w-3/4 lg:h-full lg:w-1/2">
         <img
           src={aboutme}
-          className=" object-content w-full rounded-2xl shadow-xl shadow-secondary_base md:h-full lg:h-80  lg:w-[80%] lg:-rotate-45 "
+          className=" object-content w-full rounded-2xl shadow-xl shadow-primary_300 md:h-full lg:h-80  lg:w-[80%] lg:-rotate-45 "
           alt=""
         />
       </div>

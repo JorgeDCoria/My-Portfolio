@@ -27,7 +27,7 @@ export default function ParticlesComponent() {
         },
         background: {
           color: {
-            value: "#0d2c3f",
+            value: "#030816",
           },
         },
         fpsLimit: 120,
@@ -96,26 +96,11 @@ export default function ParticlesComponent() {
             speed: 1,
             direction: "none",
             random: false,
-            straight: false,
+            straight: true,
             out_mode: {
               default: "bounce",
             },
             bounce: false,
-            // attract: {
-            //   enable: true,
-            //   rotateX: 100,
-            //   rotateY: 100,
-            // },
-            // move: {
-            //   directions: "none",
-            //   enable: true,
-            //   outModes: {
-            //     default: "bounce",
-            //   },
-            //   random: false,
-            //   speed: 1,
-            //   straight: true,
-            // },
           },
         },
         detectRetina: true,
