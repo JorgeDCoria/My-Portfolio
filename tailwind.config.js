@@ -8,13 +8,13 @@ module.exports = {
           "0% , 100%": {
             "box-shadow": "1px 4px 13px 7px rgba(13,44,63,0.25)",
           },
-          "50%": { "box-shadow": "1px 4px 13px 7px  rgba(66,157,215,0.93)" },
+          "50%": { "box-shadow": "1px 4px 13px 7px  rgba(65, 105, 225, 1)" },
         },
         shadowSecondary: {
           "0% , 100%": {
             "box-shadow": "1px 4px 13px 7px rgba(63,33,13,0.25)",
           },
-          "50%": { "box-shadow": "1px 4px 13px 7px  rgba(215,123,66,0.84)" },
+          "50%": { "box-shadow": "1px 4px 13px 7px  rgba(65, 105, 225, 1)" },
         },
       },
       animation: {

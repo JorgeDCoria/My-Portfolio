@@ -8,7 +8,7 @@ import Technologies from "../../components/technology/Technologies";
 
 const Home = () => {
   return (
-    <div>
+    <div className="h-full">
       <div id="navbar">
         <NavBar />
       </div>
@@ -23,7 +23,7 @@ const Home = () => {
         <Technologies />
       </div>
 
-      <div id="proyectos">
+      <div id="proyectos" className="scroll-mt-14">
         <Projects />
       </div>
       <div id="contacto">

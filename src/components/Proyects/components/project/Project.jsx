@@ -28,11 +28,11 @@ const Project = ({ project }) => {
             width="1em"
             height="1em"
           >
-            <path fill="#6CB3E0" d="M0 0h2000v1500H0z" />
+            <path fill="#030816" d="M0 0h2000v1500H0z" />
             <defs>
               <radialGradient id="c" gradientUnits="objectBoundingBox">
-                <stop offset={0} stopColor="#6CB3E0" />
-                <stop offset={1} stopColor="#1F6793" />
+                <stop offset={0} stopColor="#030816" />
+                <stop offset={1} stopColor="#4169e1" />
               </radialGradient>
               <linearGradient
                 id="a"
@@ -42,8 +42,8 @@ const Project = ({ project }) => {
                 x2={1550}
                 y2={750}
               >
-                <stop offset={0} stopColor="#6CB3E0" />
-                <stop offset={1} stopColor="#1F6793" />
+                <stop offset={0} stopColor="#18399a" />
+                <stop offset={1} stopColor="#030816" />
               </linearGradient>
               <path
                 id="b"
@@ -94,12 +94,12 @@ const Project = ({ project }) => {
           </svg>
 
           <div className="absolute top-0 left-0 z-50 flex h-full w-full flex-col items-center justify-around bg-primary_400 lg:bg-transparent">
-            <p className="p-2 text-center font-semibold text-primary_900 md:text-2xl lg:text-base">
+            <p className="p-2 text-center text-white md:text-2xl lg:text-xl">
               {project.description}
             </p>
             <button
               onClick={handleShowModal}
-              className="w-[90%] rounded-lg bg-secondary_500 p-2 text-white hover:bg-secondary_400"
+              className="w-[90%] rounded-lg bg-primary_base p-2 text-white duration-500 hover:bg-primary_900"
             >
               Mas Info
             </button>

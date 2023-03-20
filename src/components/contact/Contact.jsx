@@ -20,8 +20,8 @@ const social = [
 ];
 const Contact = () => {
   return (
-    <div className="grid w-full grid-cols-1 lg:grid-cols-2">
-      <h1 className="mb-4 place-self-center font-title text-5xl font-bold text-primary_500 lg:col-span-2">
+    <div className="mb-24 grid w-full grid-cols-1 lg:grid-cols-2">
+      <h1 className="mb-8 place-self-center font-title text-5xl font-bold text-primary_500 lg:col-span-2">
         Contactame
       </h1>
       <div className="flex h-full w-full justify-center ">

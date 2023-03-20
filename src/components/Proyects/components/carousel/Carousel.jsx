@@ -14,7 +14,7 @@ const Carousel = ({ data }) => {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center">
       {/* {images.map((image, i) => ( */}
-      <div className="flex h-full w-full items-center justify-center rounded-lg bg-[rgba(13,44,63,0.8)] text-sm md:text-base lg:absolute lg:top-2 lg:left-8 lg:h-52 lg:w-80">
+      <div className="flex h-full w-full items-center justify-center rounded-lg bg-[rgba(3,8,22,0.8)] text-sm md:text-base lg:absolute lg:top-2 lg:left-8 lg:h-52 lg:w-80">
         <p className="p-2 text-center text-white">
           {data[numberImage].description}
         </p>
