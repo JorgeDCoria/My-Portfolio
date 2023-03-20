@@ -153,8 +153,25 @@ const projects = [
   {
     title: "Login",
     image: login,
-    description: "",
-    data: [{ description: "", image: "" }],
+    description:
+      "Mini proyecto SPA Login, Tecnologias usadas: Ract, Tailwind, react-router-dom, toast. Se raliza un sistema que emula las diferentes interfaces de un sistema de Login",
+    data: [
+      {
+        description:
+          "Interfaz de Inicio de Sesion, el sistema notifica al usuario en case de detectar un campo vacio.",
+        image: login,
+      },
+      {
+        description:
+          "Interfaz de registro de Usuario, el sistema solicita una serie de datos relevantes para el registro",
+        image: registrarse,
+      },
+      { description: "Interfaz Recuperar contraseña", image: recuperar },
+      {
+        description: "Interfaz que simula la operacion recuperar contraseña",
+        image: actualizar,
+      },
+    ],
   },
 ];
 

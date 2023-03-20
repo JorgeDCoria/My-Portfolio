@@ -122,7 +122,7 @@ const Form = () => {
         <input
           type="submit"
           value="Enviar"
-          className="w-full cursor-pointer rounded-lg bg-primary_500 p-2 text-white transition-all duration-500 hover:scale-110 hover:bg-primary_400"
+          className="w-full cursor-pointer rounded-lg bg-primary_500 p-2 text-white transition-all duration-500 hover:scale-110 hover:bg-primary_900"
         />
       </form>
       {showModal && (

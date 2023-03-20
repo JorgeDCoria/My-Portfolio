@@ -15,9 +15,31 @@ const Footer = () => {
       <div>
         <p> No dudes en Contactarme</p>
         <div className="flex justify-center gap-4 text-3xl text-secondary_base">
-          <RiLinkedinBoxFill />
-          <RiGithubFill />
-          <RiWhatsappFill />
+          <a
+            href="https://www.linkedin.com/in/jorge-coria-9b6593246/"
+            target="_blank"
+            rel="noreferrer"
+            className="duration-500 hover:scale-150"
+          >
+            <RiLinkedinBoxFill />
+          </a>
+          <a
+            href="https://github.com/JorgeDCoria"
+            className="duration-500 hover:scale-150"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RiGithubFill />
+          </a>
+
+          <a
+            href="https://api.whatsapp.com/send?phone=3884611503"
+            className="duration-500 hover:scale-150"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RiWhatsappFill />
+          </a>
         </div>
       </div>
     </div>

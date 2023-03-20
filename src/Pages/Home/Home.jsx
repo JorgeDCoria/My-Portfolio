@@ -26,7 +26,7 @@ const Home = () => {
       <div id="proyectos" className="scroll-mt-14">
         <Projects />
       </div>
-      <div id="contacto">
+      <div id="contacto" className="scroll-mt-14">
         <Contact />
       </div>
     </div>
