@@ -71,6 +71,7 @@ const projects = [
     title: "Mecanu",
     image: mecanuHome,
     repository: "",
+    url: "",
     description:
       "Mecanu es una empresa que brinda servicios automotriz. El trabajo consistio en replantear el flujo de cotizacion de servicios lo que llevo a hacer un analisis de requirimientos, diseño del sistema (figma) y codificacion del mismo. Tecnologias: Nextjs, Tailwind, Node Js, Express, Sequelize",
     data: [
@@ -99,6 +100,7 @@ const projects = [
   {
     title: "Petagram",
     image: petagramHome,
+    url: "",
     repository: "https://github.com/alejandrabesel/Petagram_front",
     description:
       "Petagram es SPA, en proceso, realizado con Ract, Redux Toolki, Tailwind, Nodejs, Express y Auth0. Es un sistema con tematica de red social orientado a mascotas, con el fin de publicar contenido con fines de socializar, buscar parejas y notificar por mascotas sin hogar ",
@@ -128,6 +130,7 @@ const projects = [
   {
     title: "Video Games",
     image: gamesHome,
+    url: "",
     repository: "https://github.com/JorgeDCoria/VideoGamesDemoOne",
     description:
       "Desarrollo de proyecto con tematica de video Juegos. El fin del proyecto fue familiarizarse con el CSS framework Tailwind (El proyecto es totalmente responsive). Tecnologias: React, Tailwind, react-router-dom, react-icons",
@@ -157,6 +160,7 @@ const projects = [
   {
     title: "Login",
     image: login,
+    url: "",
     repository: "https://github.com/JorgeDCoria/login-prototype",
     description:
       "Mini proyecto SPA Login, Tecnologias usadas: Ract, Tailwind, react-router-dom, toast. Se raliza un sistema que emula las diferentes interfaces de un sistema de Login",

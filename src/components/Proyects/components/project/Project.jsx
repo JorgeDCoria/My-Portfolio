@@ -111,6 +111,7 @@ const Project = ({ project }) => {
           handleClickClose={handleShowModal}
           data={project.data}
           url={project.url}
+          repository={project.repository}
         />
       )}
     </div>

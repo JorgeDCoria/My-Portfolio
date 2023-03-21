@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "../../../button/Button";
 import Carousel from "../carousel/Carousel";
-
+import { RiGithubFill } from "react-icons/ri";
 // const handleClick = () => {};
 
-const ModalProject = ({ handleClickClose, data, url }) => {
+const ModalProject = ({ handleClickClose, data, url, repository }) => {
   return (
     <div
       className="w-scree fixed inset-0 z-[60] flex h-screen items-center justify-center bg-[rgba(4,15,21,0.7)]"
@@ -27,15 +27,24 @@ const ModalProject = ({ handleClickClose, data, url }) => {
           </button>
         </div>
         <Carousel data={data} />
-        {url !== "" && (
-          <div className="absolute bottom-2 flex w-full justify-center p-6 text-white">
-            {/* <Button danger text={"Cancelar"} lg onClick={handleClickClose} /> */}
-
+        <div className="absolute bottom-2 flex w-full flex-col items-center justify-center gap-2 p-6 text-white">
+          {/* <Button danger text={"Cancelar"} lg onClick={handleClickClose} /> */}
+          {repository !== "" && (
+            <a
+              href={repository}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-primary_900 shadow-lg shadow-black"
+            >
+              <RiGithubFill className="text-5xl text-primary_base  duration-500 hover:scale-110" />{" "}
+            </a>
+          )}
+          {url !== "" && (
             <a href={url} target="_blank" rel="noreferrer">
               <Button lg text={"Ir al Sitio"} />
             </a>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
