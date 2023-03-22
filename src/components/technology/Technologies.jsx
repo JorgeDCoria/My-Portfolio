@@ -29,7 +29,7 @@ const Technologies = () => {
     { img: scrum, title: "Scrum" },
   ];
   return (
-    <div className="relative min-h-[90vh] w-full ">
+    <div className="relative h-[60vh] w-full lg:h-screen ">
       <ParticlesComponent />
 
       <div className="absolute top-0 z-10  h-full w-full  ">
